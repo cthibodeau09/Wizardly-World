@@ -70,6 +70,7 @@ header {
   content: " ";
   display: block;
   clear: both;
+  background-color: red;
 }
 
 .btn {
@@ -90,7 +91,7 @@ header {
 
 button[disabled] {
   cursor: default;
-  background: #c0c7cf;
+  background-color: red;
 }
 
 .float-right {
