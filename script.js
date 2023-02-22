@@ -1,16 +1,23 @@
 // Assignment code here
 
 
-// Get references to the #generate element
+// Get references to the #generate element / variables
 var generateBtn = document.querySelector("#generate");
 var uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXY';
 var lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
 var numericChars = '1234567890';
 var symbolChars = "`~@#$%^&*()_-+={}[]|\/?':;,.";
+var passwordLength = ""
 
 
+// Prompt for how many characters the user would like in the password
 function generatePassword() {
-  console.log("Hey you clicked the button!")
+  var passwordLength = prompt("How long would you like your password to be?");
+
+  while(passwordLength <=8 || passwordLength >=128) {
+    alert("The password length must be between 8 and 128 characters");
+    var passwordLength = prompt("How long would you like your password to be?");
+  }
 }
 
 
@@ -24,6 +31,7 @@ function generatePassword() {
 //      D. Special characters
 // 3. Prompt should be validated and a password should be generated that matches criteria 
 // 4. Password is either displayed  in an alert or written on the page 
+
 
 
 // Write password to the #password input
