@@ -20,6 +20,29 @@ function generatePassword() {
   }
 }
 
+// confirmation of different variables in the password
+
+var uppercaseSelection = window.confirm("Would you like to include uppercase letters in your password?"); // true
+var characterSet = '';
+if(uppercaseSelection){
+  // add uppercase character to the set
+  characterSet += uppercaseChars;
+}
+var lowercaseSelection = window.confirm("Would you like to include lowercase letters in your password?")
+if(lowercaseSelection) {
+  // add lowercase character to the set
+  characterSet += lowercaseChars;
+}
+var numericSelection = window.confirm("Would you like numeric characters in your password?")
+if(numericSelection) {
+  // add numbers to the set
+  characterSet += numericChars;
+}
+var symbolSelection = window.confirm("Would you like special characters in your password?")
+if (symbolSelection) {
+  // add symbols to the set
+  characterSet += symbolChars;
+}
 
 // password prompts 
 // 1. enter length of password 8 <= 128 
