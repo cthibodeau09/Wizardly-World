@@ -7,29 +7,30 @@ var uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXY';
 var lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
 var numericChars = '1234567890';
 var symbolChars = "`~@#$%^&*()_-+={}[]|\/?':;,.";
-var passwordLength = ""
+var passwordLength ="";
 
 
 // Prompt for how many characters the user would like in the password
 function generatePassword() {
-  var passwordLength = prompt("How long would you like your password to be?");
+  var passwordLength = window.prompt("How long would you like your password to be?");
 
   while(passwordLength <=8 || passwordLength >=128) {
     alert("The password length must be between 8 and 128 characters");
-    var passwordLength = prompt("How long would you like your password to be?");
+    // check prompt is valid, otherwise prompt the question again
+    var passwordLength = window.prompt("How long would you like your password to be?");
   }
-}
 
 // confirmation of different variables in the password
 
 var uppercaseSelection = window.confirm("Would you like to include uppercase letters in your password?"); // true
 var characterSet = '';
-if(uppercaseSelection){
+if(characterSet.includes.uppercaseSelection){
   // add uppercase character to the set
   characterSet += uppercaseChars;
 }
 var lowercaseSelection = window.confirm("Would you like to include lowercase letters in your password?")
-if(lowercaseSelection) {
+characterSet = '';
+if(characterSet.includes.lowercaseSelection) {
   // add lowercase character to the set
   characterSet += lowercaseChars;
 }
@@ -42,8 +43,19 @@ var symbolSelection = window.confirm("Would you like special characters in your 
 if (symbolSelection) {
   // add symbols to the set
   characterSet += symbolChars;
-}
+} 
 
+
+// select a random character passwordLength amount of times
+
+  var randomPassword = ""
+  for (var i = 0; i < passwordLength; i++) {
+    randomPassword = randomPassword + characterSet(Math.floor(Math.random() * password.Length));
+      console.log(randomPassword)
+  }
+  return randomPassword;
+  }
+  
 // password prompts 
 // 1. enter length of password 8 <= 128 
 // 2. ask for character types 
