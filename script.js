@@ -2,17 +2,17 @@
 
 
 // Get references to the #generate element / variables
-var generateBtn = document.querySelector("#generate");
-var uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXY';
-var lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
-var numericChars = '1234567890';
-var symbolChars = "`~@#$%^&*()_-+={}[]|\/?':;,.";
-var passwordLength ="";
+const generateBtn = document.querySelector("#generate");
+const uppercaseChars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+const lowercaseChars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+const numericChars = ["1","2","3","4","5","6","7","8","9"];
+const symbolChars = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "<", ">", "(", ")", "{", "}", "/",];
+
 
 
 // Prompt for how many characters the user would like in the password
 function generatePassword() {
-  var passwordLength = window.prompt("How long would you like your password to be?");
+  const passwordLength = window.prompt("How long would you like your password to be?");
 
   while(passwordLength <=8 || passwordLength >=128) {
     alert("The password length must be between 8 and 128 characters");
@@ -22,24 +22,24 @@ function generatePassword() {
 
 // confirmation of different variables in the password
 
-var uppercaseSelection = window.confirm("Would you like to include uppercase letters in your password?"); // true
-var characterSet = '';
+const uppercaseSelection = window.confirm("Would you like to include uppercase letters in your password?"); // true
+const characterSet = '';
 if(characterSet.includes.uppercaseSelection){
   // add uppercase character to the set
   characterSet += uppercaseChars;
 }
-var lowercaseSelection = window.confirm("Would you like to include lowercase letters in your password?")
+const lowercaseSelection = window.confirm("Would you like to include lowercase letters in your password?")
 characterSet = '';
 if(characterSet.includes.lowercaseSelection) {
-  // add lowercase character to the set
+  // add lowercase character to the setchanged 
   characterSet += lowercaseChars;
 }
-var numericSelection = window.confirm("Would you like numeric characters in your password?")
+const numericSelection = window.confirm("Would you like numeric characters in your password?")
 if(numericSelection) {
   // add numbers to the set
   characterSet += numericChars;
 }
-var symbolSelection = window.confirm("Would you like special characters in your password?")
+const symbolSelection = window.confirm("Would you like special characters in your password?")
 if (symbolSelection) {
   // add symbols to the set
   characterSet += symbolChars;
@@ -48,7 +48,7 @@ if (symbolSelection) {
 
 // select a random character passwordLength amount of times
 
-  var randomPassword = ""
+  const randomPassword = ""
   for (var i = 0; i < passwordLength; i++) {
     randomPassword = randomPassword + characterSet(Math.floor(Math.random() * password.Length));
       console.log(randomPassword)
