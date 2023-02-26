@@ -20,3 +20,4 @@ This website contains a generate password feature which should generate a random
 
 https://github.com/cthibodeau09/Wizardly-World
 https://cthibodeau09.github.io/Wizardly-World/
+<img width="1088" alt="Screenshot 2023-02-26 at 10 50 51 AM" src="https://user-images.githubusercontent.com/123329107/221424553-f1a6c797-7257-4b86-b40b-7e5d3407b913.png">
